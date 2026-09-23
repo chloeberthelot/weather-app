@@ -1,0 +1,50 @@
+
+.convertisseur > p {
+  color: var(--texte-doux);
+  margin-bottom: 20px;
+}
+
+.champs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.celsius,
+.fahrenheit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 28px;
+  border: 1px solid var(--bordure);
+  border-radius: 18px;
+  background: var(--carte);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--texte-doux);
+  transition: border-color 0.2s;
+}
+
+.celsius:focus-within,
+.fahrenheit:focus-within {
+  border-color: var(--accent);
+}
+
+.celsius input,
+.fahrenheit input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--texte);
+}
+
+.celsius p {
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  color: var(--erreur);
+}
